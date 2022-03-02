@@ -1,0 +1,36 @@
+#todo_list {
+  overflow-y: scroll;
+}
+.todo_wrap {
+  width: 250px;
+}
+
+.todo {
+  resize: none;
+}
+
+#button_wrap {
+  display: flex;
+  align-items: center;
+}
+
+#add_todo {
+  border-color: none;
+  background-color: transparent !important;
+  border: none;
+}
+
+#add_todo img {
+  width: 30px;
+  height: 30px;
+}
+
+#graph {
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: transparent;
+  border: none;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: 30px;
+}

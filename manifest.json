@@ -1,0 +1,25 @@
+{
+    "name": "Time Scheduler",
+    "description": "look at your time!",
+    "version": "0.1",
+    "manifest_version": 3,
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": ["storage", "activeTab", "scripting"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "/images/icons8-add-time-16.png",
+        "32": "/images/icons8-add-time-30.png",
+        "48": "/images/icons8-add-time-40.png",
+        "128": "/images/icons8-add-time-80.png"
+      }
+    },
+    "icons": {
+      "16": "/images/icons8-add-time-16.png",
+      "32": "/images/icons8-add-time-30.png",
+      "48": "/images/icons8-add-time-40.png",
+      "128": "/images/icons8-add-time-80.png"
+    }
+  }
