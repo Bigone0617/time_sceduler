@@ -9,7 +9,7 @@ let todo_list = document.getElementById("todo_list");
 // todo list 렌더
 function render () {
     chrome.storage.sync.get("todos", (data) => {
-        if(data){
+        if(data.todos){
             if(data.todos.length != 0) {
                 graph_btn.hidden = false;
             }
@@ -95,11 +95,14 @@ function save_todo (parent_node, save_update){
     chrome.storage.sync.get("todos", (data) => {
         let todos;
 
-        let is_duple_time = check_time(data.todos, [start_time, end_time, turn]);
-        if(is_duple_time[0]){
-            alert(`It's already scheduled time. : ${is_duple_time[1]}`);
-            return;
+        if(data.todos){
+            let is_duple_time = check_time(data.todos, [start_time, end_time, turn]);
+            if(is_duple_time[0]){
+                alert(`It's already scheduled time. : ${is_duple_time[1]}`);
+                return;
+            }
         }
+        
 
         // 저장일 경우
         if(save_update == 'save'){
